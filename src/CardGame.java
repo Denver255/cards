@@ -49,7 +49,8 @@ public class CardGame {
         playerOneHand = new Hand();
         playerTwoHand = new Hand();
         gameActive = true;
-
+        loser=false;
+        winner=false;
         createDeck();
     }
 

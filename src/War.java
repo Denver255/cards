@@ -55,10 +55,10 @@ public class War extends CardGame {
             // Switch turns after drawing
             curcard=playerOneHand.getCard(0);
             curcard.setSelected(true,selectedCardRaiseAmount);
-            switchTurns();
-             if(winner==true || loser==true){
+              if(winner==true || loser==true){
             Reset();
-        }
+            }
+            switchTurns();
         }
     }
 
