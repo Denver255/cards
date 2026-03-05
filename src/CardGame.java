@@ -11,11 +11,17 @@ public class CardGame {
     ArrayList<Card> discardPile = new ArrayList<>();
     Card selectedCard;
     int selectedCardRaiseAmount = 15;
+    int backup=0;
+    int nuke=0;
+    int nukecounter=-1;
 
     // Game state
     boolean playerOneTurn = true;
     Card lastPlayedCard;
     boolean gameActive;
+    static boolean winner=false;
+    static boolean loser=false;
+
 
     // UI
     ClickableRectangle drawButton;
@@ -145,6 +151,10 @@ public class CardGame {
     }
 
     public void handleComputerTurn() {
+        drawCard(playerTwoHand);
+        switchTurns();
+    }
+    public void showP2Card() {
         drawCard(playerTwoHand);
         switchTurns();
     }

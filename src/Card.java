@@ -7,13 +7,53 @@ public class Card extends ClickableRectangle {
     PImage img;
     boolean turned = false;
     private int clickableWidth = 30; // Width of the left sliver that is clickable
-    private boolean selected = false;
+    boolean selected = false;
     private int baseY;
     private boolean hasBaseY = false;
+    int rvalue;
 
     Card(String value, String suit) {
         this.value = value;
         this.suit = suit;
+        if(value=="2"){
+            rvalue=2;
+        }
+         if(value=="3"){
+            rvalue=3;
+        }
+         if(value=="4"){
+            rvalue=4;
+        }
+         if(value=="5"){
+            rvalue=5;
+        }
+         if(value=="6"){
+            rvalue=6;
+        }
+         if(value=="7"){
+            rvalue=7;
+        }
+         if(value=="8"){
+            rvalue=8;
+        }
+         if(value=="9"){
+            rvalue=9;
+        }
+         if(value=="10"){
+            rvalue=10;
+        }
+         if(value=="J"){
+            rvalue=11;
+        }
+         if(value=="Q"){
+            rvalue=12;
+        }
+         if(value=="K"){
+            rvalue=13;
+        }
+         if(value=="A"){
+            rvalue=14;
+        }
     }
 
     Card(String value, String suit, PImage img) {
